@@ -1,0 +1,197 @@
+{
+    "name": "Customer Service Specialist L3",
+    "modules": [
+        {
+            "name": "Business knowledge and understanding",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "8",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Customer journey knowledge",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "6",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Knowing your customer and their needs or customer insight",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "10",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Customer service culture and environment awareness",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "12",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Business focussed service delivery",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "8",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Provide a positive customer experience",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "14",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Working with your customer or customer insights",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "12",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Customer service performance",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "4",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Service improvement",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "12",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Develop self",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "2",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Ownership or Responsibility",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "3",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Team working",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "4",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Equality",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "3",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Presentation",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "2",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        }
+    ],
+    "fsd": [
+        {
+            "fs": "Maths",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        },
+        {
+            "fs": "English",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        }
+    ]
+}

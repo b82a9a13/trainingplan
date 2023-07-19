@@ -1,0 +1,89 @@
+{
+    "name": "Learning Mentor L3",
+    "modules": [
+        {
+            "name": "The role of the learning mentor within the workplace",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "29",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Providing or signposting information, advice and or guidance",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "16",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Supporting the learner to learn",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "11",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Providing or signposting information, advice and or guidance",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "35",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Understanding and demonstrating professionalism",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "9",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        }
+    ],
+    "fsd": [
+        {
+            "fs": "Maths",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        },
+        {
+            "fs": "English",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        }
+    ]
+}

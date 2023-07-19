@@ -1,0 +1,209 @@
+{
+    "name": "Retail Team Leader L3",
+    "modules": [
+        {
+            "name": "Customer",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "9",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Business",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "8",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Financial",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "9",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Leadership",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "5",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Marketing",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "9",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Communication",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "8",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Sales and Promotion",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "5",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Product",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "9",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Merchandising",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "4",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Stock",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "5",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Technology",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "7",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Developing Self and Others",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "7",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Team Performance",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "7",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Legal and Governance",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "5",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Diversity",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "3",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        }
+    ],
+    "fsd": [
+        {
+            "fs": "Maths",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        },
+        {
+            "fs": "English",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        }
+    ]
+}

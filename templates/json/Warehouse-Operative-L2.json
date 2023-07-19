@@ -1,0 +1,137 @@
+{
+    "name": "Warehourse Operative L2",
+    "modules": [
+        {
+            "name": "Unit 1 - Health Safety & Security at work",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "12",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote, Workshop, Research, Written tasks, Assignments, Observations",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Unit 2 - Effective working relationships ",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "11",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote, Workshop, Research, Written tasks, Assignments, Observations",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Unit 3 - Pick Goods in Logistics Operations",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "11",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote, Workshop, Research, Written tasks, Assignments, Observations",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Unit 4 - Wrap & Pack Goods",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "11",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote, Workshop, Research, Written tasks, Assignments, Observations",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Unit 5 - Hygiene standards in handling & storing goods",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "11",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote, Workshop, Research, Written tasks, Assignments, Observations",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Unit 6 - Use equipment to move goods",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "11",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote, Workshop, Research, Written tasks, Assignments, Observations",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Unit 7 - Keep stock at required levels",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "11",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote, Workshop, Research, Written tasks, Assignments, Observations",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Unit 8 - Receive goods in Logistics operations",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "11",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote, Workshop, Research, Written tasks, Assignments, Observations",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Unit 9 - Provision of customer service",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "11",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote, Workshop, Research, Written tasks, Assignments, Observations",
+            "otjt": "",
+            "aotjhc": ""
+        }
+    ],
+    "fsd": [
+        {
+            "fs": "Maths",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        },
+        {
+            "fs": "English",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        }
+    ]
+}

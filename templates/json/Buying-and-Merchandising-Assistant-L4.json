@@ -1,0 +1,241 @@
+{
+    "name": "Buying and Merchandising L4",
+    "modules": [
+        {
+            "name": "Duty 1",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "10",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Duty 2",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "10",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Duty 3",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "10",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Duty 4",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "10",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Duty 5",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "10",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Duty 6",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "10",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "option1": [
+                {
+                    "name": "Duty 7",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "8",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                },
+                {
+                    "name": "Duty 8",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "8",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                },
+                {
+                    "name": "Duty 9",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "8",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                },
+                {
+                    "name": "Duty 10",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "8",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                },
+                {
+                    "name": "Duty 11",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "8",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                }
+            ]
+        },
+        {
+            "option2": [
+                {
+                    "name": "Duty 13",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "7",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                },
+                {
+                    "name": "Duty 14",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "5",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                },
+                {
+                    "name": "Duty 15",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "8",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                },
+                {
+                    "name": "Duty 16",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "6",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                },
+                {
+                    "name": "Duty 17",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "6",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                },
+                {
+                    "name": "Duty 18",
+                    "psd": "",
+                    "rsd": "",
+                    "ped": "",
+                    "red": "",
+                    "mw": "7",
+                    "potjh": "",
+                    "mod": "Elearning, F2F, Remote",
+                    "otjt": "",
+                    "aotjhc": ""
+                }
+            ]
+        }
+    ],
+    "fsd": [
+        {
+            "fs": "Maths",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        },
+        {
+            "fs": "English",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        }
+    ]
+}

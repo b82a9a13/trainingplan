@@ -1,0 +1,89 @@
+{
+"name": "Assesor Coach L4",
+"modules": [
+    {
+        "name": "Plannin Coaching and Assessment",
+        "psd": "",
+        "rsd": "",
+        "ped": "",
+        "red": "",
+        "mw": "20",
+        "potjh": "",
+        "mod": "Elearning, F2F, Remote",
+        "otjt": "",
+        "aotjhc": ""
+    },
+    {
+        "name": "Devlivery Coaching Support",
+        "psd": "",
+        "rsd": "",
+        "ped": "",
+        "red": "",
+        "mw": "30",
+        "potjh": "",
+        "mod": "Elearning, F2F, Remote",
+        "otjt": "",
+        "aotjhc": ""
+    },
+    {
+        "name": "Vocational Assessment",
+        "psd": "",
+        "rsd": "",
+        "ped": "",
+        "red": "",
+        "mw": "17",
+        "potjh": "",
+        "mod": "Elearning, F2F, Remote",
+        "otjt": "",
+        "aotjhc": ""
+    },
+    {
+        "name": "Quality Improvement",
+        "psd": "",
+        "rsd": "",
+        "ped": "",
+        "red": "",
+        "mw": "28",
+        "potjh": "",
+        "mod": "Elearning, F2F, Remote",
+        "otjt": "",
+        "aotjhc": ""
+    },
+    {
+        "name": "EPA gathering",
+        "psd": "",
+        "rsd": "",
+        "ped": "",
+        "red": "",
+        "mw": "5",
+        "potjh": "",
+        "mod": "Elearning, F2F, Remote",
+        "otjt": "",
+        "aotjhc": ""
+    }
+],
+"fsd": [
+    {
+        "fs": "Maths",
+        "level": "",
+        "mod": "BKSB & F2F & Remote",
+        "sd": "",
+        "ped": "",
+        "aed": "",
+        "usd": "",
+        "uped": "",
+        "ad": ""
+    },
+    {
+        "fs": "English",
+        "level": "",
+        "mod": "BKSB & F2F & Remote",
+        "sd": "",
+        "ped": "",
+        "aed": "",
+        "usd": "",
+        "uped": "",
+        "ad": ""
+    }
+]
+}

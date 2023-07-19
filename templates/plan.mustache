@@ -1,0 +1,289 @@
+<h2 class='text-center'><b>{{fullname}}'s Training Plan</b></h2>
+<h2 class='text-center'><b>{{coursename}}</b></h2>
+<form action="" id="plan_form">
+    <table class='table table-bordered table-striped table-hover'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Employer</th>
+                <th>Start Date</th>
+                <th>Planned End Date</th>
+                <th>Length of Programme</th>
+                <th>OTJH</th>
+                <th>EPAO</th>
+                <th>Funding Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="td_name"><input class='w-100' type='text' id="name" {{new_plan}} value="{{learnername}}" {{default_readonly}}></td>
+                <td id="td_employer"><input class='w-100' type='text' id="employer" {{new_plan}} value="{{employer}}" {{default_readonly}}></td>
+                <td id="td_startdate"><input class='w-100' type="date" id="startdate" {{new_plan}} value="{{startdate}}" {{default_readonly}}></td>
+                <td id="td_planenddate"><input class='w-100' type="date" id="planenddate" {{new_plan}} value="{{plannedendd}}" {{edit_readonly}}></td>
+                <td id="td_lengthofprog"><input class='w-100' type="number" id="lengthofprog" {{new_plan}} value="{{lengthofprog}}" {{default_readonly}}></td>
+                <td id="td_otjh"><input class='w-100' type="number" id="otjh" {{new_plan}} value="{{otjh}}" {{default_readonly}}></td>
+                <td id="td_epao">
+                    <select class='w-100' id="epao" {{new_plan}} {{edit_readonly}}>
+                        <option disabled {{epao_default}} value="">Choose EPAO</option>
+                        <option value="frawards" {{frawards}}>FR Awards</option>
+                        <option value="candg" {{candg}}>C & G</option>
+                        <option value="innovate" {{innovate}}>Innovate</option>
+                        <option value="dsw" {{dsw}}>DSW</option>
+                        <option value="nocn" {{nocn}}>NOCN</option>
+                    </select>
+                </td>
+                <td id="td_fundsource">
+                    <select class='w-100' id="fundsource" {{new_plan}} {{edit_readonly}}>
+                        <option disabled {{fund_default}} value="">Choose Funding Source</option>
+                        <option value="contrib" {{contrib}}>5% Contribution</option>
+                        <option value="levy" {{levy}}>Levy</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class='table table-bordered table-striped table-hover'>
+        <h3>Initial Assessment</h3>
+        <thead>
+            <tr>
+                <th>BKSB Result Maths</th>
+                <th>BKSB Result English</th>
+                <th>Learning Style</th>
+                <th>Skill Scan Learner Result</th>
+                <th>Skill Scan Employer Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="td_bksbrm"><input class='w-100' type='number' id="bksbrm" {{new_plan}} value="{{bksbrm}}" {{edit_readonly}}></td>
+                <td id="td_bksbre"><input class='w-100' type='number' id="bksbre" {{new_plan}} value="{{bksbre}}" {{edit_readonly}}></td>
+                <td id="td_learnstyle">
+                    <select class='w-100' id="learnstyle" {{new_plan}} {{edit_readonly}}>
+                        <option disabled {{learnstyle_default}} value="">Choose Learning Style</option>
+                        <option value="visual" {{visual}}>Visual</option>
+                        <option value="auditory" {{auditory}}>Auditory</option>
+                        <option value="kinaesthetic" {{kinaesthetic}}>Kinaesthetic</option>
+                    </select>
+                </td>
+                <td id="td_skillscanlr"><input class='w-100' type='text' id="skillscanlr" {{new_plan}} value="{{skillscanlr}}" {{edit_readonly}}></td>
+                <td id="td_skillscaner"><input class='w-100' type='text' id="skillscaner" {{new_plan}} value="{{skillscaner}}" {{edit_readonly}}></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class='table table-bordered table-striped table-hover'>
+        <h3>Off The Job Calculation</h3>
+        <thead>
+            <tr>
+                <th>Apprentice Hours Per Week</th>
+                <th>Weeks on Programme</th>
+                <th>Less Annual Leave</th>
+                <th>Hours Per Week</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="td_apprenhpw"><input class='w-100' type="number" id="apprenhpw" step="0.01" {{new_plan}} value="{{hpw}}" {{default_readonly}}></td>
+                <td id="td_weeksonprog"><input class='w-100' type="number" id="weeksonprog" step="1" {{new_plan}} value="{{wop}}" {{default_readonly}}></td>
+                <td id="td_annualleave"><input class='w-100' type="number" id="annualleave" step="0.01" {{new_plan}} value="{{annuallw}}" {{default_readonly}}></td>
+                <td id="td_hoursperweek"><input class='w-100' type="number" id="hoursperweek" step="0.01" {{new_plan}} value="{{hoursperweek}}" {{edit_readonly}}></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class='table table-bordered table-striped table-hover'>
+        <h3>Aspirations & Career Goals</h3>
+            <tr class='d-flex'>
+                <th class='w-25'>Area of strength</th>
+                <td class='w-75' id="td_aostrength"><textarea class='w-100' id="aostrength" {{new_plan}} {{edit_readonly}}>{{aostrength}}</textarea></td>
+            </tr>
+            <tr class='d-flex'>
+                <th class='w-25'>Long Term Goals</th>
+                <td class='w-75' id="td_ltgoals"><textarea class='w-100' id="ltgoals" {{new_plan}} {{edit_readonly}}>{{ltgoals}}</textarea></td>
+            </tr>
+            <tr class='d-flex'>
+                <th class='w-25'>Short Term Goals</th>
+                <td class='w-75' id="td_stgoals"><textarea class='w-100' id="stgoals" {{new_plan}} {{edit_readonly}}>{{stgoals}}</textarea></td>
+            </tr>
+            <tr class='d-flex'>
+                <th class='w-25'>IAG (Information, Advice, Guidance)</th>
+                <td class='w-75' id="td_iaguide"><textarea class='w-100' id="iaguide" {{new_plan}} {{edit_readonly}}>{{iaguide}}</textarea></td>
+            </tr>
+    </table>
+    <table class='table table-bordered table-striped table-hover'>
+        <thead>
+            <tr>
+                <th>Recognition of Prior Learning (use this section to describe and evidence any prior learning, qualifications, work experience etc).</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="td_recopl"><textarea class='w-100' id="recopl" {{new_plan}} {{edit_readonly}}>{{recopl}}</textarea></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class='table table-bordered table-striped table-hover'>
+        <thead>
+            <tr>
+                <th>Modules</th>
+                <th>Planned Start Date</th>
+                <th>Revised Start Date</th>
+                <th>Planned End Date</th>
+                <th>Revised End Date</th>
+                <th>Module Weighting %</th>
+                <th>Planned OTJH</th>
+                <th>Method of Delivery</th>
+                <th>OTJ Tasks</th>
+                <th>Actual OTJH completed (as per log)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#modulesarray}}
+                <tr>
+                    <td class='td-mod-m'><textarea class='w-100 mod-m' {{new_plan}} {{default_readonly}}>{{0}}</textarea></td>
+                    <td class='td-mod-psd'><input class='w-100 mod-psd' type='date' {{new_plan}}></td>
+                    <td class='td-mod-rsd'><input class='w-100 mod-rsd' type='date' {{new_disabled}}></td>
+                    <td class='td-mod-ped'><input class='w-100 mod-ped' type='date' {{new_plan}}></td>
+                    <td class='td-mod-red'><input class='w-100 mod-red' type='date' {{new_disabled}}></td>
+                    <td class='td-mod-mw'><input class='w-100 mod-mw' type='number' step='0.01' {{new_plan}} value='{{1}}' {{default_readonly}}></td>
+                    <td class='td-mod-potjh'><input class='w-100 mod-potjh' type='number' step='0.01' {{new_plan}} value='{{3}}' {{default_readonly}}></td>
+                    <td class='td-mod-mod'><textarea class='w-100 mod-mod' {{new_plan}}>{{2}}</textarea></td>
+                    <td class='td-mod-otjt'><textarea class='w-100 mod-otjt' {{new_plan}}></textarea></td>
+                    <td><input class='w-100' disabled></td>
+                </tr>
+            {{/modulesarray}}
+            {{#modarray}}
+                <tr>
+                    <td class='td-mod-m'><textarea class='w-100 mod-m' {{new_plan}} {{default_readonly}}>{{1}}</textarea></td>
+                    <td class='td-mod-psd'><input class='w-100 mod-psd' type='date' {{new_plan}} value="{{2}}" {{edit_readonly}}></td>
+                    <td class='td-mod-rsd'><input class='w-100 mod-rsd' type='date' {{new_disabled}} value="{{3}}"></td>
+                    <td class='td-mod-ped'><input class='w-100 mod-ped' type='date' {{new_plan}} value="{{4}}" {{edit_readonly}}></td>
+                    <td class='td-mod-red'><input class='w-100 mod-red' type='date' {{new_disabled}} value="{{5}}"></td>
+                    <td class='td-mod-mw'><input class='w-100 mod-mw' type='number' step='0.01' {{new_plan}} value='{{6}}' {{default_readonly}}></td>
+                    <td class='td-mod-potjh'><input class='w-100 mod-potjh' type='number' step='0.01' {{new_plan}} value='{{7}}' {{default_readonly}}></td>
+                    <td class='td-mod-mod'><textarea class='w-100 mod-mod' {{new_plan}} {{edit_readonly}}>{{8}}</textarea></td>
+                    <td class='td-mod-otjt'><textarea class='w-100 mod-otjt' {{new_plan}}>{{9}}</textarea></td>
+                    <td><input class='w-100' disabled value="{{10}}"></td>
+                </tr>
+            {{/modarray}}
+            <tr>
+                <th>Totals</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{total_mw}}</td>
+                <td>{{total_otjh}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    {{#fsrequired}}
+        <div class='d-flex'><h2>Required functional skills?</h2><p id='td_fscheckbox'><input class='ml-1 mt-3' type='checkbox' id='fscheckbox'></p></div>
+    {{/fsrequired}}
+    {{#fsarray}}
+    <div style='display: {{0}};' id='fs_div'>
+        <table class='table table-bordered table-striped table-hover'>
+            <h3>Functional Skills Delivery</h3>
+            <p>
+                As part of NTA's commitment to both yourself and your employer we will always work with you to ensure you reach your maximum potential during and after your apprenticeship where possible. As part of this we will encourage you to over-achieve the minimum requirement needed for Maths & English. Where we feel there is time and potential to work towards a higher level of Maths & English during the planned time of your apprenticeships, we will provide the support and learning platform to help you reach higher goals.
+            </p>
+            <thead>
+                <tr>
+                    <th>Functional Skills</th>
+                    <th>Level</th>
+                    <th>Method of Delivery</th>
+                    <th>Start Date</th>
+                    <th>Planned End Date</th>
+                    <th>Actual End Date</th>
+                    <th>Actual End/Achievment Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id='td_mathfs'><input class='w-100' type='text' id='mathfs' value="{{mathfs}}" {{default_readonly}}></td>
+                    <td id='td_mathlevel'><input class='w-100' type='number' id='mathlevel' value="{{mathlevel}}" {{edit_readonly}}></td>
+                    <td id='td_mathmod'><textarea class='w-100' id='mathmod' {{edit_readonly}}>{{mathmod}}{{defualt_fs_tor}}</textarea></td>
+                    <td id='td_mathsd'><input class='w-100' type='date' id='mathsd' value="{{mathsd}}" {{edit_readonly}}></td>
+                    <td id='td_mathped'><input class='w-100' type='date' id='mathped' value="{{mathped}}" {{edit_readonly}}></td>
+                    <td id='td_mathaed'><input class='w-100' type='date' id='mathaed' {{new_disabled}} value="{{mathaed}}"></td>
+                    <td id='td_mathaead'><input class='w-100' type='date' id='mathaead' {{new_disabled}} value="{{mathaead}}"></td>
+                </tr>
+                <tr>
+                    <td id='td_engfs'><input class='w-100' type='text' id='engfs' value="{{engfs}}" {{default_readonly}}></td>
+                    <td id='td_englevel'><input class='w-100' type='number' id='englevel' value="{{englevel}}" {{edit_readonly}}></td>
+                    <td id='td_engmod'><textarea class='w-100' id='engmod' {{edit_readonly}}>{{engmod}}{{defualt_fs_tor}}</textarea></td>
+                    <td id='td_engsd'><input class='w-100' type='date' id='engsd' value="{{engsd}}" {{edit_readonly}}></td>
+                    <td id='td_engped'><input class='w-100' type='date' id='engped' value="{{engped}}" {{edit_readonly}}></td>
+                    <td id='td_engaed'><input class='w-100' type='date' id='engaed' {{new_disabled}} value="{{engaed}}"></td>
+                    <td id='td_engaead'><input class='w-100' type='date' id='engaead' {{new_disabled}} value="{{engaead}}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {{/fsarray}}
+    <table class='table table-bordered table-striped table-hover' id="prog_table">
+        <h3>Progress Reviews</h3>
+        <thead>
+            <tr>
+                <th>Type of Review</th>
+                <th>Planned Review</th>
+                <th>Actual Review</th>
+            </tr>
+        </thead>
+        <tbody id="pr_tbody">
+            {{#prarray}}
+                <tr class='tr-td-pr'>
+                    <td class='td-pr-type'>
+                        <select class='w-100 pr-type' {{new_plan}} {{6}}>
+                            <option disabled {{progreview_default}} value="" {{1}}>Learner/Employer</option>
+                            <option value='Learner' {{2}}>Learner</option>
+                            <option value='Employer' {{3}}>Employer</option>
+                        </select>
+                    </td>
+                    <td class='td-pr-pr'><input class='w-100 pr-pr' type='date' {{new_plan}} value="{{4}}" {{6}}></td>
+                    <td class='td-pr-ar'><input class='w-100 pr-ar' type='date' {{new_disabled}} value="{{5}}"></td>
+                </tr>
+            {{/prarray}}
+        </tbody>
+    </table>
+    {{#prbtns}}
+        <button type="button" class="btn btn-primary m-1" onclick="addprRecord()" id="pr_addnewrecord">Add New Record</button>
+        <button type="button" class="btn btn-primary m-1" onclick="removeprRecord()" id="pr_removerecord" disabled>Remove Record</button>
+    {{/prbtns}}
+    <table class='table table-bordered table-striped table-hover'>
+        <thead>
+            <tr>
+                <th>Additional Support Arrangements</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="td_addsa"><textarea class='w-100' id="addsa" {{edit_readonly}}>{{addsa}}</textarea></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class='table table-bordered table-striped table-hover'>
+        <h3>Changes Log (to be used as an ongoing journal to record any changes to original plan throughout the apprenticeship).</h3>
+        <thead>
+            <tr>
+                <th>Date of Change</th>
+                <th>Log</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#logarray}}
+                <tr>
+                    <td id="td_cl_date{{2}}"><input class='w-100' id="cl_date{{2}}" type="date" {{new_disabled}} value="{{0}}" {{2}}></td>
+                    <td id="td_cl_log{{2}}"><textarea class='w-100' id="cl_log{{2}}" {{new_disabled}} {{2}}>{{1}}</textarea></td>
+                </tr>
+            {{/logarray}}
+        </tbody>
+    </table>
+    <h1 style="display:none;" class='text-error' id="tp_error"></h1>
+    {{#successUpdate}}
+        <h1 class='text-success' id="tplan_success">{{0}}</h1>
+    {{/successUpdate}}
+    <button class='btn btn-primary w-100' type="submit" name="submit">Submit</button>
+</form>
+<script src='./classes/js/{{jsfile}}.js' defer></script>

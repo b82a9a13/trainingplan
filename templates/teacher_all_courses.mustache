@@ -1,0 +1,9 @@
+<h1 class='text-center'>Training Plans</h1>
+<div class='text-center'>
+    {{#enrolments}}
+        <button class="btn btn-primary mb-1 mr-1" onclick="course_clicked({{0}})">{{1}}</button>
+    {{/enrolments}}
+</div>
+<h2 class="text-error" style="display:none;" id="trainingplan_error"></h2>
+<div id="course_content_div"></div>
+<link rel="stylesheet" href="./classes/css/teacher.css">
