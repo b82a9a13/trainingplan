@@ -58,8 +58,8 @@ if(!preg_match($number, $total) || empty($total)){
 }
 
 $fsArray = [
-    ['mathaed', 'mathusd', 'mathuped', 'mathaead'],
-    ['engaed', 'engusd', 'enguped', 'engaead']
+    ['mathaed', 'mathaead'],
+    ['engaed', 'engaead']
 ];
 $int = 1;
 $fsValues = [];

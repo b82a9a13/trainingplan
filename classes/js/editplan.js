@@ -101,7 +101,7 @@ document.getElementById('plan_form').addEventListener('submit', (e)=>{
     xhr.send(params);
 });
 function addprRecord(){
-    const html = "<td class='td-pr-type'><select class='w-100 pr-type' required><option disabled value='' selected>Learner/Employer</option><option value='Learner'>Learner</option><option value='Employer' {{3}}>Employer</option></select></td><td class='td-pr-pr'><input class='w-100 pr-pr' type='date' required></td><td class='td-pr-ar'><input class='w-100 pr-ar' type='date'></td>";
+    const html = "<td class='td-pr-type'><select class='w-100 pr-type' required><option disabled value='' selected>Learner/Employer</option><option value='Learner'>Learner</option><option value='Employer'>Employer</option></select></td><td class='td-pr-pr'><input class='w-100 pr-pr' type='date' required></td><td class='td-pr-ar'><input class='w-100 pr-ar' type='date'></td>";
     const tr = document.createElement('tr');
     tr.className = 'tr-td-pr';
     tr.innerHTML = html;
