@@ -35,7 +35,7 @@ if($_GET['e']){
                             require_capability('local/trainingplan:teacher', $context);
                             $PAGE->set_context($context);
                             $PAGE->set_course($lib->get_course_record($cid));
-                            $PAGE->set_url(new moodle_url("/local/trainingplan/trainingplan.php?cid=$cid&uid=$uid"));
+                            $PAGE->set_url(new moodle_url("/local/trainingplan/plan.php?cid=$cid&uid=$uid"));
                             $PAGE->set_title('Training Plan');
                             $PAGE->set_heading('Training Plan');
                             $PAGE->set_pagelayout('incourse');
