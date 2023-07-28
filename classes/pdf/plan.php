@@ -280,6 +280,7 @@ if($errorTxt != ''){
     $pdf->writeHTML($html, true, false, false, false, false, '');
 
     $pdf->AddPage('P');
+    //Table 7
     $html = '<table border="1" cellpadding="2"><thead><tr>
         <th'.$headStyle.'><b>Date of Change</b></th>
         <th'.$headStyle.'><b>Log</b></th>
@@ -296,7 +297,6 @@ if($errorTxt != ''){
     $html .= '</tbody></table>';
     $pdf->writeHTML($html, true, false, false, false, false, '');
 
-    
-
     $pdf->Output("Training-Plan_".$lib->get_course_fullname($cid)."_$fullname");
+    \local_trainingplan\event\viewed_plan_pdf::create(array('context' => \context_course::instance($cid), 'courseid' => $cid, 'relateduserid' => $uid))->trigger();
 }
