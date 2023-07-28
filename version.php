@@ -8,5 +8,5 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_trainingplan';
-$plugin->version = 17;
+$plugin->version = 18;
 $plugin->requires = 2016052314;

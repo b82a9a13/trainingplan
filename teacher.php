@@ -58,7 +58,7 @@ if($errorText != ''){
         'enrolments' => array_values($enrolments)
     ];
     echo $OUTPUT->render_from_template('local_trainingplan/teacher_all_courses', $template);
-    echo("<script src='./classes/js/teacher_course.js'></script>");
+    echo("<script src='./amd/build/teacher_course.min.js'></script>");
     \local_trainingplan\event\viewed_menu::create(array('context' => \context_system::instance()))->trigger();
 } elseif($type == 'one'){
     $_SESSION['tp_setup_type'] = 'one';
@@ -66,7 +66,7 @@ if($errorText != ''){
         'coursename' => $lib->get_course_fullname($id)
     ];
     echo $OUTPUT->render_from_template('local_trainingplan/teacher_one_course', $template);
-    echo("<script src='./classes/js/teacher_course.js'></script>");
+    echo("<script src='./amd/build/teacher_course.min.js'></script>");
     echo("<script defer>course_clicked($id)</script>");
     \local_trainingplan\event\viewed_menu::create(array('context' => \context_course::instance($id)))->trigger();
 }
