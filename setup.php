@@ -76,7 +76,25 @@ if($errorTxt != ''){
         $e = '?id='.$cid;
     }
     //Create template data and output template
+    $p = 'local_trainingplan';
     $template = (Object)[
+        'setup' => get_string('setup', $p),
+        'btm' => get_string('btm', $p),
+        'total_months' => get_string('total_months', $p),
+        'total_otjh' => get_string('total_otjh', $p),
+        'employ_or_store' => get_string('employ_or_store', $p),
+        'coach' => get_string('coach', $p),
+        'man_or_men' => get_string('man_or_men', $p),
+        'start_date' => get_string('start_date', $p),
+        'contract_hpw' => get_string('contract_hpw', $p),
+        'annual_lw' => get_string('annual_lw', $p),
+        'trainingplan' => get_string('trainingplan', $p),
+        'option' => get_string('option', $p),
+        'choose_a_plan' => get_string('choose_a_plan', $p),
+        'choose_a_option' => get_string('choose_a_option', $p),
+        'coach_sign' => get_string('coach_sign', $p),
+        'clear' => get_string('clear', $p),
+        'submit' => get_string('submit', $p),
         'btm_ext' => $e,
         'fullname' => $fullname,
         'coursename' => $lib->get_course_fullname($cid),

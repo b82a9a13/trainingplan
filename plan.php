@@ -75,11 +75,84 @@ if($errorTxt != ''){
     } elseif($e == 'c'){
         $e = '?id='.$cid;
     }
-    echo('<button onclick="window.location.href=`./teacher.php'.$e.'`" class="btn btn-primary" id="plan_btm">Back to menu</button>');
+    echo('<div class="d-flex"><div class="w-50 text-left"><button onclick="window.location.href=`./teacher.php'.$e.'`" class="btn btn-primary" id="plan_btm">'.get_string('btm', 'local_trainingplan').'</button></div><div class="w-50 text-right"><button class="btn btn-primary" onclick="window.open(`./classes/pdf/plan.php?cid='.$cid.'&uid='.$uid.'`,`_blank`)">'.get_string('view_pdf', 'local_trainingplan').'</button></div></div>');
     //Check if a setup exists for the userid and courseid
     if(!$lib->check_learners_setup($uid, $cid)){
         echo("<h1 class='text-error'>Setup does not exists for the learner and course provided.</h1>");
     } else {
+        $p = 'local_trainingplan';
+        $textTemplate = (Object)[
+            'trainingplan' => get_string('trainingplan', $p),
+            'name' => get_string('name', $p),
+            'employer_txt' => get_string('employer', $p),
+            'start_date' => get_string('start_date', $p),
+            'plan_end_date' => get_string('plan_end_date', $p),
+            'length_of_prog' => get_string('length_of_prog', $p),
+            'otjh_txt' => get_string('otjh', $p),
+            'epao_txt' => get_string('epao', $p),
+            'fund_source' => get_string('fund_source', $p),
+            'choose_epao' => get_string('choose_epao', $p),
+            'fr_awards' => get_string('fr_awards', $p),
+            'c_and_g' => get_string('c_and_g', $p),
+            'innovate_txt' => get_string('innovate', $p),
+            'dsw_txt' => get_string('dsw', $p),
+            'nocn_txt' => get_string('nocn', $p),
+            'choose_fund_source' => get_string('choose_fund_source', $p),
+            'contrib_five' => get_string('contrib_five', $p),
+            'levy_txt' => get_string('levy', $p),
+            'initial_assess' => get_string('initial_assess', $p),
+            'bksb_rm' => get_string('bksb_rm', $p),
+            'bksb_re' => get_string('bksb_re', $p),
+            'learn_style' => get_string('learn_style', $p),
+            'skill_scan_lr' => get_string('skill_scan_lr', $p),
+            'skill_scan_er' => get_string('skill_scan_er', $p),
+            'choose_learn_style' => get_string('choose_learn_style', $p),
+            'visual_txt' => get_string('visual', $p),
+            'auditory_txt' => get_string('auditory', $p),
+            'kinaesthetic_txt' => get_string('kinaesthetic', $p),
+            'otj_calc' => get_string('otj_calc', $p),
+            'appren_hpw' => get_string('appren_hpw', $p),
+            'weeks_on_prog' => get_string('weeks_on_prog', $p),
+            'less_al' => get_string('less_al', $p),
+            'hours_pw' => get_string('hours_pw', $p),
+            'asp_and_cg' => get_string('asp_and_cg', $p),
+            'area_of_stren' => get_string('area_of_stren', $p),
+            'long_tg' => get_string('long_tg', $p),
+            'short_tg' => get_string('short_tg', $p),
+            'iag' => get_string('iag', $p),
+            'rec_of_pl' => get_string('rec_of_pl', $p),
+            'modules' => get_string('modules', $p),
+            'plan_sd' => get_string('plan_sd', $p),
+            'revise_sd' => get_string('revise_sd', $p),
+            'plan_ed' => get_string('plan_ed', $p),
+            'revise_ed' => get_string('revise_ed', $p),
+            'mod_weigh' => get_string('mod_weigh', $p),
+            'plan_otjh' => get_string('plan_otjh', $p),
+            'method_od' => get_string('method_od', $p),
+            'otj_tasks' => get_string('otj_tasks', $p),
+            'act_otjh_comp' => get_string('act_otjh_comp', $p),
+            'totals' => get_string('totals', $p),
+            'required_fs' => get_string('required_fs', $p),
+            'func_sd' => get_string('func_sd', $p),
+            'func_sd_desc' => get_string('func_sd_desc', $p),
+            'func_s' => get_string('func_s', $p),
+            'level' => get_string('level', $p),
+            'act_ed' => get_string('act_ed', $p),
+            'act_ead' => get_string('act_ead', $p),
+            'prog_review' => get_string('prog_review', $p),
+            'type_or' => get_string('type_or', $p),
+            'plan_review' => get_string('plan_review', $p),
+            'act_review' => get_string('act_review', $p),
+            'learn_employ' => get_string('learn_employ', $p),
+            'learner' => get_string('learner', $p),
+            'add_new_rec' => get_string('add_new_rec', $p),
+            'rem_rec' => get_string('rem_rec', $p),
+            'additional_sa' => get_string('additional_sa', $p),
+            'change_lt' => get_string('change_lt', $p),
+            'date_oc' => get_string('date_oc', $p),
+            'log' => get_string('log', $p),
+            'submit' => get_string('submit', $p)
+        ];
         if(!$lib->check_trainingplan_exists($uid, $cid)){
             //Training Plan does not exist
             $data = $lib->get_setup_tp_data($uid, $cid);
@@ -114,6 +187,7 @@ if($errorTxt != ''){
                 'fsarray' => [['none']],
                 'fsrequired' => [[]]
             ];
+            $template = (object)array_merge((array)$template, (array)$textTemplate);
             echo $OUTPUT->render_from_template('local_trainingplan/plan', $template);
             \local_trainingplan\event\viewed_plan::create(array('context' => \context_course::instance($cid), 'courseid' => $cid, 'relateduserid' => $uid, 'other' => $e))->trigger();
         } else {
@@ -170,6 +244,7 @@ if($errorTxt != ''){
                 'jsfile' => 'editplan',
                 'prbtns' => [[]]
             ];
+            $template = (object)array_merge((array)$template, (array)$textTemplate);
             if(!empty($data[2])){
                 $template->fsarray = [['block']];
             }

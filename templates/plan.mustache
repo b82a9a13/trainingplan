@@ -1,17 +1,17 @@
-<h2 class='text-center'><b>{{fullname}}'s Training Plan</b></h2>
+<h2 class='text-center'><b>{{fullname}} {{trainingplan}}</b></h2>
 <h2 class='text-center'><b>{{coursename}}</b></h2>
 <form action="" id="plan_form">
     <table class='table table-bordered table-striped table-hover'>
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Employer</th>
-                <th>Start Date</th>
-                <th>Planned End Date</th>
-                <th>Length of Programme</th>
-                <th>OTJH</th>
-                <th>EPAO</th>
-                <th>Funding Source</th>
+                <th>{{name}}</th>
+                <th>{{employer_txt}}</th>
+                <th>{{start_date}}</th>
+                <th>{{plan_end_date}}</th>
+                <th>{{length_of_prog}}</th>
+                <th>{{otjh_txt}}</th>
+                <th>{{epao_txt}}</th>
+                <th>{{fund_source}}</th>
             </tr>
         </thead>
         <tbody>
@@ -24,33 +24,33 @@
                 <td id="td_otjh"><input class='w-100' type="number" id="otjh" {{new_plan}} value="{{otjh}}" {{default_readonly}}></td>
                 <td id="td_epao">
                     <select class='w-100' id="epao" {{new_plan}} {{edit_readonly}}>
-                        <option disabled {{epao_default}} value="">Choose EPAO</option>
-                        <option value="frawards" {{frawards}}>FR Awards</option>
-                        <option value="candg" {{candg}}>C & G</option>
-                        <option value="innovate" {{innovate}}>Innovate</option>
-                        <option value="dsw" {{dsw}}>DSW</option>
-                        <option value="nocn" {{nocn}}>NOCN</option>
+                        <option disabled {{epao_default}} value="">{{choose_epao}}</option>
+                        <option value="frawards" {{frawards}}>{{fr_awards}}</option>
+                        <option value="candg" {{candg}}>{{c_and_g}}</option>
+                        <option value="innovate" {{innovate}}>{{innovate_txt}}</option>
+                        <option value="dsw" {{dsw}}>{{dsw_txt}}</option>
+                        <option value="nocn" {{nocn}}>{{nocn_txt}}</option>
                     </select>
                 </td>
                 <td id="td_fundsource">
                     <select class='w-100' id="fundsource" {{new_plan}} {{edit_readonly}}>
-                        <option disabled {{fund_default}} value="">Choose Funding Source</option>
-                        <option value="contrib" {{contrib}}>5% Contribution</option>
-                        <option value="levy" {{levy}}>Levy</option>
+                        <option disabled {{fund_default}} value="">{{choose_fund_source}}</option>
+                        <option value="contrib" {{contrib}}>{{contrib_five}}</option>
+                        <option value="levy" {{levy}}>{{levy_txt}}</option>
                     </select>
                 </td>
             </tr>
         </tbody>
     </table>
     <table class='table table-bordered table-striped table-hover'>
-        <h3>Initial Assessment</h3>
+        <h3>{{initial_assess}}</h3>
         <thead>
             <tr>
-                <th>BKSB Result Maths</th>
-                <th>BKSB Result English</th>
-                <th>Learning Style</th>
-                <th>Skill Scan Learner Result</th>
-                <th>Skill Scan Employer Result</th>
+                <th>{{bksb_rm}}</th>
+                <th>{{bksb_re}}</th>
+                <th>{{learn_style}}</th>
+                <th>{{skill_scan_lr}}</th>
+                <th>{{skill_scan_er}}</th>
             </tr>
         </thead>
         <tbody>
@@ -59,10 +59,10 @@
                 <td id="td_bksbre"><input class='w-100' type='number' id="bksbre" {{new_plan}} value="{{bksbre}}" {{edit_readonly}}></td>
                 <td id="td_learnstyle">
                     <select class='w-100' id="learnstyle" {{new_plan}} {{edit_readonly}}>
-                        <option disabled {{learnstyle_default}} value="">Choose Learning Style</option>
-                        <option value="visual" {{visual}}>Visual</option>
-                        <option value="auditory" {{auditory}}>Auditory</option>
-                        <option value="kinaesthetic" {{kinaesthetic}}>Kinaesthetic</option>
+                        <option disabled {{learnstyle_default}} value="">{{choose_learn_style}}</option>
+                        <option value="visual" {{visual}}>{{visual_txt}}</option>
+                        <option value="auditory" {{auditory}}>{{auditory_txt}}</option>
+                        <option value="kinaesthetic" {{kinaesthetic}}>{{kinaesthetic_txt}}</option>
                     </select>
                 </td>
                 <td id="td_skillscanlr"><input class='w-100' type='text' id="skillscanlr" {{new_plan}} value="{{skillscanlr}}" {{edit_readonly}}></td>
@@ -71,13 +71,13 @@
         </tbody>
     </table>
     <table class='table table-bordered table-striped table-hover'>
-        <h3>Off The Job Calculation</h3>
+        <h3>{{otj_calc}}</h3>
         <thead>
             <tr>
-                <th>Apprentice Hours Per Week</th>
-                <th>Weeks on Programme</th>
-                <th>Less Annual Leave</th>
-                <th>Hours Per Week</th>
+                <th>{{appren_hpw}}</th>
+                <th>{{weeks_on_prog}}</th>
+                <th>{{less_al}}</th>
+                <th>{{hours_pw}}</th>
             </tr>
         </thead>
         <tbody>
@@ -90,28 +90,28 @@
         </tbody>
     </table>
     <table class='table table-bordered table-striped table-hover'>
-        <h3>Aspirations & Career Goals</h3>
+        <h3>{{asp_and_cg}}</h3>
             <tr class='d-flex'>
-                <th class='w-25'>Area of strength</th>
+                <th class='w-25'>{{area_of_stren}}</th>
                 <td class='w-75' id="td_aostrength"><textarea class='w-100' id="aostrength" {{new_plan}} {{edit_readonly}}>{{aostrength}}</textarea></td>
             </tr>
             <tr class='d-flex'>
-                <th class='w-25'>Long Term Goals</th>
+                <th class='w-25'>{{long_tg}}</th>
                 <td class='w-75' id="td_ltgoals"><textarea class='w-100' id="ltgoals" {{new_plan}} {{edit_readonly}}>{{ltgoals}}</textarea></td>
             </tr>
             <tr class='d-flex'>
-                <th class='w-25'>Short Term Goals</th>
+                <th class='w-25'>{{short_tg}}</th>
                 <td class='w-75' id="td_stgoals"><textarea class='w-100' id="stgoals" {{new_plan}} {{edit_readonly}}>{{stgoals}}</textarea></td>
             </tr>
             <tr class='d-flex'>
-                <th class='w-25'>IAG (Information, Advice, Guidance)</th>
+                <th class='w-25'>{{iag}}</th>
                 <td class='w-75' id="td_iaguide"><textarea class='w-100' id="iaguide" {{new_plan}} {{edit_readonly}}>{{iaguide}}</textarea></td>
             </tr>
     </table>
     <table class='table table-bordered table-striped table-hover'>
         <thead>
             <tr>
-                <th>Recognition of Prior Learning (use this section to describe and evidence any prior learning, qualifications, work experience etc).</th>
+                <th>{{rec_of_pl}}</th>
             </tr>
         </thead>
         <tbody>
@@ -123,16 +123,16 @@
     <table class='table table-bordered table-striped table-hover'>
         <thead>
             <tr>
-                <th>Modules</th>
-                <th>Planned Start Date</th>
-                <th>Revised Start Date</th>
-                <th>Planned End Date</th>
-                <th>Revised End Date</th>
-                <th>Module Weighting %</th>
-                <th>Planned OTJH</th>
-                <th>Method of Delivery</th>
-                <th>OTJ Tasks</th>
-                <th>Actual OTJH completed (as per log)</th>
+                <th>{{modules}}</th>
+                <th>{{plan_sd}}</th>
+                <th>{{revise_sd}}</th>
+                <th>{{plan_ed}}</th>
+                <th>{{revise_ed}}</th>
+                <th>{{mod_weigh}}</th>
+                <th>{{plan_otjh}}</th>
+                <th>{{method_od}}</th>
+                <th>{{otj_tasks}}</th>
+                <th>{{act_otjh_comp}}</th>
             </tr>
         </thead>
         <tbody>
@@ -165,7 +165,7 @@
                 </tr>
             {{/modarray}}
             <tr>
-                <th>Totals</th>
+                <th>{{totals}}</th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -179,24 +179,22 @@
         </tbody>
     </table>
     {{#fsrequired}}
-        <div class='d-flex'><h2>Required functional skills?</h2><p id='td_fscheckbox'><input class='ml-1 mt-3' type='checkbox' id='fscheckbox'></p></div>
+        <div class='d-flex'><h2>{{required_fs}}</h2><p id='td_fscheckbox'><input class='ml-1 mt-3' type='checkbox' id='fscheckbox'></p></div>
     {{/fsrequired}}
     {{#fsarray}}
     <div style='display: {{0}};' id='fs_div'>
         <table class='table table-bordered table-striped table-hover'>
-            <h3>Functional Skills Delivery</h3>
-            <p>
-                As part of NTA's commitment to both yourself and your employer we will always work with you to ensure you reach your maximum potential during and after your apprenticeship where possible. As part of this we will encourage you to over-achieve the minimum requirement needed for Maths & English. Where we feel there is time and potential to work towards a higher level of Maths & English during the planned time of your apprenticeships, we will provide the support and learning platform to help you reach higher goals.
-            </p>
+            <h3>{{func_sd}}</h3>
+            <p>{{func_sd_desc}}</p>
             <thead>
                 <tr>
-                    <th>Functional Skills</th>
-                    <th>Level</th>
-                    <th>Method of Delivery</th>
-                    <th>Start Date</th>
-                    <th>Planned End Date</th>
-                    <th>Actual End Date</th>
-                    <th>Actual End/Achievment Date</th>
+                    <th>{{func_s}}</th>
+                    <th>{{level}}</th>
+                    <th>{{method_od}}</th>
+                    <th>{{start_date}}</th>
+                    <th>{{plan_end_date}}</th>
+                    <th>{{act_ed}}</th>
+                    <th>{{act_ead}}</th>
                 </tr>
             </thead>
             <tbody>
@@ -223,12 +221,12 @@
     </div>
     {{/fsarray}}
     <table class='table table-bordered table-striped table-hover' id="prog_table">
-        <h3>Progress Reviews</h3>
+        <h3>{{prog_review}}</h3>
         <thead>
             <tr>
-                <th>Type of Review</th>
-                <th>Planned Review</th>
-                <th>Actual Review</th>
+                <th>{{type_or}}</th>
+                <th>{{plan_review}}</th>
+                <th>{{act_review}}</th>
             </tr>
         </thead>
         <tbody id="pr_tbody">
@@ -236,9 +234,9 @@
                 <tr class='tr-td-pr'>
                     <td class='td-pr-type'>
                         <select class='w-100 pr-type' {{new_plan}} {{6}}>
-                            <option disabled {{progreview_default}} value="" {{1}}>Learner/Employer</option>
-                            <option value='Learner' {{2}}>Learner</option>
-                            <option value='Employer' {{3}}>Employer</option>
+                            <option disabled {{progreview_default}} value="" {{1}}>{{learn_employ}}</option>
+                            <option value='Learner' {{2}}>{{learner}}</option>
+                            <option value='Employer' {{3}}>{{employer_txt}}</option>
                         </select>
                     </td>
                     <td class='td-pr-pr'><input class='w-100 pr-pr' type='date' {{new_plan}} value="{{4}}" {{6}}></td>
@@ -248,13 +246,13 @@
         </tbody>
     </table>
     {{#prbtns}}
-        <button type="button" class="btn btn-primary m-1" onclick="addprRecord()" id="pr_addnewrecord">Add New Record</button>
-        <button type="button" class="btn btn-primary m-1" onclick="removeprRecord()" id="pr_removerecord" disabled>Remove Record</button>
+        <button type="button" class="btn btn-primary m-1" onclick="addprRecord()" id="pr_addnewrecord">{{add_new_rec}}</button>
+        <button type="button" class="btn btn-primary m-1" onclick="removeprRecord()" id="pr_removerecord" disabled>{{rem_rec}}</button>
     {{/prbtns}}
     <table class='table table-bordered table-striped table-hover'>
         <thead>
             <tr>
-                <th>Additional Support Arrangements</th>
+                <th>{{additional_sa}}</th>
             </tr>
         </thead>
         <tbody>
@@ -264,11 +262,11 @@
         </tbody>
     </table>
     <table class='table table-bordered table-striped table-hover'>
-        <h3>Changes Log (to be used as an ongoing journal to record any changes to original plan throughout the apprenticeship).</h3>
+        <h3>{{change_lt}}</h3>
         <thead>
             <tr>
-                <th>Date of Change</th>
-                <th>Log</th>
+                <th>{{date_oc}}</th>
+                <th>{{log}}</th>
             </tr>
         </thead>
         <tbody>
@@ -284,6 +282,6 @@
     {{#successUpdate}}
         <h1 class='text-success' id="tplan_success">{{0}}</h1>
     {{/successUpdate}}
-    <button class='btn btn-primary w-100' type="submit" name="submit">Submit</button>
+    <button class='btn btn-primary w-100' type="submit" name="submit">{{submit}}</button>
 </form>
 <script src='./amd/build/{{jsfile}}.min.js' defer></script>

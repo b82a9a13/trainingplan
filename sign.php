@@ -104,6 +104,7 @@ if($errorTxt != ''){
     //Output error message
     echo("<h1 class='text-center text-error'><b>$errorTxt</b></h1>");
 } else {
+    $p = 'local_trainingplan';
     if($coach){
         if($e == 'a'){
             $e = '';
@@ -111,6 +112,10 @@ if($errorTxt != ''){
             $e = '?id='.$cid;
         }
         $template = (Object)[
+            'btm' => get_string('btm', $p),
+            'signature' => get_string('signature', $p),
+            'clear' => get_string('clear', $p),
+            'submit' => get_string('submit', $p),
             'btm_ext' => $e,
             'return_page' => 'teacher.php',
             'coach' => 'Coach',
@@ -121,6 +126,10 @@ if($errorTxt != ''){
         echo $OUTPUT->render_from_template('local_trainingplan/sign', $template);
     } else {
         $template = (Object)[
+            'btm' => get_string('btm', $p),
+            'signature' => get_string('signature', $p),
+            'clear' => get_string('clear', $p),
+            'submit' => get_string('submit', $p),
             'role_type' => 'Learner',
             'coursename' => $lib->get_course_fullname($cid),
             'fullname' => $fullname,

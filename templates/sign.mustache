@@ -1,14 +1,14 @@
-<button onclick="window.location.href='./{{return_page}}{{btm_ext}}'" class="btn btn-primary" id="sign_btm">Back to menu</button>
-<h2 class='text-center'><b>{{fullname}}'s {{coach}} Signature</b></h2>
+<button onclick="window.location.href='./{{return_page}}{{btm_ext}}'" class="btn btn-primary" id="sign_btm">{{btm}}</button>
+<h2 class='text-center'><b>{{fullname}} {{coach}} {{signature}}</b></h2>
 <h2 class='text-center'><b>{{coursename}}</b></h2>
 <form action="" id="sign_form">
     <div class="sign-div text-center">
-        <h4>{{role_type}} signature</h4>
+        <h4>{{role_type}} {{signature}}</h4>
         <canvas height="200px" width="500px" class="sign-canvas" style="background: white;" id="signature"></canvas>
-        <button class="btn btn-primary mb-1 mr-1 clear-btn" type="button">Clear</button>
+        <button class="btn btn-primary mb-1 mr-1 clear-btn" type="button">{{clear}}</button>
         <br>
         <h2 style="display:none;" class="text-error" id="sign_error"></h2>
-        <button class='btn btn-primary' type="submit">Submit</button>
+        <button class='btn btn-primary' type="submit">{{submit}}</button>
     </div>
 </form>
 <script src='./amd/build/sign.min.js'></script>

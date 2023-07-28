@@ -55,6 +55,7 @@ if($errorText != ''){
 } elseif($type == 'all'){
     $_SESSION['tp_setup_type'] = 'all';
     $template = (Object)[
+        'title' => get_string('trainingplans', 'local_trainingplan'),
         'enrolments' => array_values($enrolments)
     ];
     echo $OUTPUT->render_from_template('local_trainingplan/teacher_all_courses', $template);
@@ -63,6 +64,7 @@ if($errorText != ''){
 } elseif($type == 'one'){
     $_SESSION['tp_setup_type'] = 'one';
     $template = (Object)[
+        'title' => get_string('trainingplans', 'local_trainingplan'),
         'coursename' => $lib->get_course_fullname($id)
     ];
     echo $OUTPUT->render_from_template('local_trainingplan/teacher_one_course', $template);

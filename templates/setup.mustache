@@ -1,15 +1,15 @@
-<button onclick="window.location.href='./teacher.php{{btm_ext}}'" class="btn btn-primary" id="setup_btm">Back to menu</button>
-<h2 class="text-center"><b>{{fullname}}'s Setup</b></h2>
+<button onclick="window.location.href='./teacher.php{{btm_ext}}'" class="btn btn-primary" id="setup_btm">{{btm}}</button>
+<h2 class="text-center"><b>{{fullname}} {{setup}}</b></h2>
 <h2 class="text-center"><b>{{coursename}}</b></h2>
 <form action="" id="setup_form" class='text-center'>
     <table class='table table-bordered table-striped' style="max-width:800px;margin:0 auto;">
         <thead>
             <tr>
-                <th>Total Months</th>
-                <th>Total Off The Job Hours</th>
-                <th>Employer or Store</th>
-                <th>Coach</th>
-                <th>Manager/Mentor</th>
+                <th>{{total_months}}</th>
+                <th>{{total_otjh}}</th>
+                <th>{{employ_or_store}}</th>
+                <th>{{coach}}</th>
+                <th>{{man_or_men}}</th>
             </tr>
         </thead>
         <tbody>
@@ -25,11 +25,11 @@
     <table class='table table-bordered table-striped' style="max-width:800px;margin:0 auto;">
         <thead>
             <tr>
-                <th>Start Date</th>
-                <th>Contracted Hours Per Week</th>
-                <th>Annual Leave Weeks</th>
-                <th>Training Plan</th>
-                <th style='display:none;' id="option_th">Option</th>
+                <th>{{start_date}}</th>
+                <th>{{contract_hpw}}</th>
+                <th>{{annual_lw}}</th>
+                <th>{{trainingplan}}</th>
+                <th style='display:none;' id="option_th">{{option}}</th>
             </tr>
         </thead>
         <tbody>
@@ -39,7 +39,7 @@
                 <td><input class='w-100' type="number" step="0.01" required id="alw"></td>
                 <td>
                     <select class='w-100' required id="trainplan" onchange="plan_clicked()">
-                        <option disabled selected value="" hidden>Choose A Training Plan</option>
+                        <option disabled selected value="" hidden>{{choose_a_plan}}</option>
                         {{#filesarray}}
                             <option value='{{1}}' options='{{2}}' id="option_{{1}}">{{0}}</option>
                         {{/filesarray}}
@@ -47,19 +47,19 @@
                 </td>
                 <td style='display:none;' id="option_td">
                     <select class='w-100' id="option">
-                        <option disabled selected value="" hidden>Choose A Option</option>
+                        <option disabled selected value="" hidden>{{choose_a_option}}</option>
                     </select>
                 </td>
             </tr>
         </tbody>
     </table>
     <div class="sign-div text-center">
-        <h4>Coach signature</h4>
+        <h4>{{coach_sign}}</h4>
         <canvas height="200px" width="500px" class="sign-canvas" style="background: white;" id="signature"></canvas>
-        <button class="btn btn-primary mb-1 mr-1 clear-btn" type="button">Clear</button>
+        <button class="btn btn-primary mb-1 mr-1 clear-btn" type="button">{{clear}}</button>
     </div>
     <h2 style="display:none;" class="text-error" id="setup_error"></h2>
-    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" name="submit" class="btn btn-primary">{{submit}}</button>
 </form>
 <script src='./amd/build/setup.min.js'></script>
 <script src='./amd/build/sign.min.js'></script>
