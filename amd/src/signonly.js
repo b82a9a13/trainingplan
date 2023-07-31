@@ -53,7 +53,7 @@ document.getElementById('sign_form').addEventListener('submit', (e)=>{
                     }
                 }
             } else {
-                error.innerText = 'Creation error.';
+                error.innerText = 'Connection error.';
                 error.style.display = 'block';
             }
         }

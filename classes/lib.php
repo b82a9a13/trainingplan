@@ -478,15 +478,7 @@ class lib{
                 $record = new stdClass();
                 $record->id = $DB->get_record_sql('SELECT id FROM {trainingplan_plans_fs} WHERE plansid = ? and fspos = ?',[$planid, $i])->id;
                 $record->fsaed = $fsArray[$i][0];
-                $record->fsusd = $fsArray[$i][1];
-                $record->fsuped = $fsArray[$i][2];
-                $record->fsaead = $fsArray[$i][3];
-                if($i == 2){
-                    $record->fslevel = $fsArray[$i][4];
-                    $record->fsmod = $fsArray[$i][5];
-                    $record->fssd = $fsArray[$i][6];
-                    $record->fsped = $fsArray[$i][7];
-                }
+                $record->fsaead = $fsArray[$i][1];
                 $DB->update_record('trainingplan_plans_fs', $record, true);
             }
             for($i = 0; $i < count($prArray); $i++){

@@ -8,7 +8,7 @@ $returnText = new stdClass();
 $errorarray = [];
 $sign = $_POST['sign'];
 if(!preg_match("/^[a-zA-Z0-9+:;\/, =]*$/", $sign) || empty($sign)){
-    array_push($errorarray, 'Signature');
+    array_push($errorarray, get_string('signature', 'local_trainingplan'));
 }
 
 //Check for an error and if no error occurs proceed to inputing data into the database
