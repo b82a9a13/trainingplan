@@ -9,6 +9,7 @@ require_once(__DIR__.'/../../../../config.php');
 use local_trainingplan\lib;
 require_login();
 $lib = new lib;
+$p = 'local_trainingplan';
 
 //Validate inputs and generate error text where required
 $errorTxt = '';
@@ -17,11 +18,11 @@ $cid = $_GET['cid'];
 $fullname = '';
 if($_GET['uid']){
     if(!preg_match("/^[0-9]*$/", $uid) || empty($uid)){
-        $errorTxt .= 'Invalid user id provided.';
+        $errorTxt .= get_string('invalid_uid', $p);
     } else {
         if($_GET['cid']){
             if(!preg_match("/^[0-9]*$/", $cid) || empty($cid)){
-                $errorTxt .= 'Invalid course id provided.';
+                $errorTxt .= get_string('invalid_cip', $p);
             } else {
                 //Successful input validation
                 //Now check capabilities and validate user provided is a learner
@@ -30,18 +31,18 @@ if($_GET['uid']){
                     require_capability('local/trainingplan:teacher', $context);
                     $fullname = $lib->check_learner_enrolment($cid, $uid);
                     if($fullname == false){
-                        $errorTxt .= 'The user selected is not enrolled as a learner in the course selected.';
+                        $errorTxt .= get_string('selected_nealic', $p);
                     }
                 } else {
-                    $errorTxt .= 'You are not enrolled as a coach in the course provided.';
+                    $errorTxt .= get_string('not_eacicp', $p);
                 }
             }
         } else {
-            $errorTxt .= 'No course id provided.';
+            $errorTxt .= get_string('no_cip', $p);
         }
     }
 } else {
-    $errorTxt .= 'No user id provided.';
+    $errorTxt .= get_string('no_uip', $p);
 }
 
 if($errorTxt != ''){
@@ -62,7 +63,7 @@ if($errorTxt != ''){
     $pdf->AddPage('P');
     $pdf->setPrintHeader(true);
     $pdf->setFont('Times', 'B', 26);
-    $pdf->Cell(0, 0, 'Training Plan - '.$fullname, 0, 0, 'C', 0, '', 0);
+    $pdf->Cell(0, 0, get_string('trainingplan', $p).' - '.$fullname, 0, 0, 'C', 0, '', 0);
     $pdf->Ln();
 
     $pdf->setFont('Times', 'B', 11);
@@ -71,30 +72,31 @@ if($errorTxt != ''){
 
     //Table 1
     if($data[0][6] == 'frawards'){
-        $data[0][6] = 'FR Awards';
+        $data[0][6] = get_string('fr_awards', $p);
     } elseif($data[0][6] == 'candg'){
-        $data[0][6] = 'C & G';
+        $data[0][6] = get_string('c_and_g', $p);
     } elseif($data[0][6] == 'innovate'){
-        $data[0][6] = 'Innovate';
+        $data[0][6] = get_string('innovate', $p);
     } elseif($data[0][6] == 'dsw'){
-        $data[0][6] = 'DSW';
+        $data[0][6] = get_string('dsw', $p);
     } elseif($data[0][6] == 'nocn'){
-        $data[0][6] = 'NOCN';
+        $data[0][6] = get_string('nocn', $p);
     }
     if($data[0][7] == 'contrib'){
-        $data[0][7] = '5% Contribution';
+        $data[0][7] = get_string('contrib_five', $p);
     } elseif($data[0][7] == 'levy'){
-        $data[0][7] = 'Levy';
+        $data[0][7] = get_string('levy', $p);
     }
+    $startdate = get_string('start_date', $p);
     $html = '<table border="1" cellpadding="2"><thead><tr>
-        <th'.$headStyle.'><b>Name</b></th>
-        <th'.$headStyle.'><b>Employer</b></th>
-        <th'.$headStyle.'><b>Start Date</b></th>
-        <th'.$headStyle.'><b>Planned End Date</b></th>
-        <th'.$headStyle.'><b>Length of Programme</b></th>
-        <th'.$headStyle.'><b>OTJH</b></th>
-        <th'.$headStyle.'><b>EPAO</b></th>
-        <th'.$headStyle.'><b>Funding Source</b></th>
+        <th'.$headStyle.'><b>'.get_string('name', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('employer', $p).'</b></th>
+        <th'.$headStyle.'><b>'.$startdate.'</b></th>
+        <th'.$headStyle.'><b>'.get_string('plan_end_date', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('length_of_prog', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('otjh', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('epao', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('fund_source', $p).'</b></th>
     </tr></thead><tbody><tr>
         <td>'.$data[0][0].'</td>
         <td>'.$data[0][1].'</td>
@@ -111,11 +113,11 @@ if($errorTxt != ''){
     //Table 2
     $data[0][10] = ucfirst($data[0][10]);
     $html = '<table border="1" cellpadding="2"><thead><tr>
-        <th'.$headStyle.'><b>BKSB Result Maths</b></th>
-        <th'.$headStyle.'><b>BKSB Result English</b></th>
-        <th'.$headStyle.'><b>Learning Style</b></th>
-        <th'.$headStyle.'><b>Skill Scan Learner Result</b></th>
-        <th'.$headStyle.'><b>Skill Scan Employer Result</b></th>
+        <th'.$headStyle.'><b>'.get_string('bksb_rm', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('bksb_re', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('learn_style', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('skill_scan_lr', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('skill_scan_er', $p).'</b></th>
     </tr></thead><tbody><tr>
         <td>'.$data[0][8].'</td>
         <td>'.$data[0][9].'</td>
@@ -128,10 +130,10 @@ if($errorTxt != ''){
 
     //Table 3
     $html = '<table border="1" cellpadding="2"><thead><tr>
-        <th'.$headStyle.'><b>Apprentice Hours Per Week</b></th>
-        <th'.$headStyle.'><b>Weeks on Programme</b></th>
-        <th'.$headStyle.'><b>Less Annual Leave</b></th>
-        <th'.$headStyle.'><b>Hours Per Week</b></th>
+        <th'.$headStyle.'><b>'.get_string('appren_hpw', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('weeks_on_prog', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('less_al', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('hours_pw', $p).'</b></th>
     </tr></thead><tbody><tr>
         <td>'.$data[0][13].'</td>
         <td>'.$data[0][14].'</td>
@@ -144,19 +146,19 @@ if($errorTxt != ''){
     //Table 4
     $html = '<table border="1" cellpadding="2">
         <tr>
-            <th width="98px"'.$headStyle.'><b>Area of Strength</b></th>
+            <th width="98px"'.$headStyle.'><b>'.get_string('area_of_stren', $p).'</b></th>
             <td width="440px">'.$data[0][17].'</td>
         </tr>
         <tr>
-            <th width="98px"'.$headStyle.'><b>Long Term Goals</b></th>
+            <th width="98px"'.$headStyle.'><b>'.get_string('long_tg', $p).'</b></th>
             <td width="440px">'.$data[0][18].'</td>
         </tr>
         <tr>
-            <th width="98px"'.$headStyle.'><b>Short Term Goals</b></th>
+            <th width="98px"'.$headStyle.'><b>'.get_string('short_tg', $p).'</b></th>
             <td width="440px">'.$data[0][19].'</td>
         </tr>
         <tr>
-            <th width="98px"'.$headStyle.'><b>IAG (Information, Advice, Guidance)</b></th>
+            <th width="98px"'.$headStyle.'><b>'.get_string('iag', $p).'</b></th>
             <td width="440px">'.$data[0][20].'</td>
         </tr>
     </table>';
@@ -164,7 +166,7 @@ if($errorTxt != ''){
 
     //Table 5
     $html = '<table border="1" cellpadding="2"><thead><tr>
-        <th'.$headStyle.'><b>Recognition of Prior Learning (use this section to describe and evidence any prior learning, qualifications, work experience etc).</b></th>
+        <th'.$headStyle.'><b>'.get_string('rec_of_pl', $p).'</b></th>
     </tr></thead><tbody><tr>
         <td>'.$data[0][21].'</td>
     </tr></tbody></table>
@@ -178,13 +180,13 @@ if($errorTxt != ''){
             }
         }
         $html = '<table border="1" cellpadding="2"><thead><tr>
-            <th'.$headStyle.'><b>Functional Skills</b></th>
-            <th'.$headStyle.'><b>Level</b></th>
-            <th'.$headStyle.'><b>Method of Delivery</b></th>
-            <th'.$headStyle.'><b>Start Date</b></th>
-            <th'.$headStyle.'><b>Planned End Date</b></th>
-            <th'.$headStyle.'><b>Actual End Date</b></th>
-            <th'.$headStyle.'><b>Actual End/Achievment Date</b></th>
+            <th'.$headStyle.'><b>'.get_string('func_s', $p).'</b></th>
+            <th'.$headStyle.'><b>'.get_string('level', $p).'</b></th>
+            <th'.$headStyle.'><b>'.get_string('method_od', $p).'</b></th>
+            <th'.$headStyle.'><b>'.$startdate.'</b></th>
+            <th'.$headStyle.'><b>'.get_string('plan_ed', $p).'</b></th>
+            <th'.$headStyle.'><b>'.get_string('act_ed', $p).'</b></th>
+            <th'.$headStyle.'><b>'.get_string('act_ead', $p).'</b></th>
         </tr></thead><tbody>
             <tr>
                 <td>'.$data[2][0][1].'</td>
@@ -210,17 +212,19 @@ if($errorTxt != ''){
     }
 
     $html = '<table border="1" cellpadding="2"><thead><tr>
-        <th'.$headStyle.'><b>Type of Review</b></th>
-        <th'.$headStyle.'><b>Planned Review</b></th>
-        <th'.$headStyle.'><b>Actual Review</b></th>
+        <th'.$headStyle.'><b>'.get_string('type_or', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('prog_rev', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('act_review', $p).'</b></th>
     </tr></thead><tbody>
     ';
+    $learner = get_string('learner', $p);
+    $employer = get_string('employer', $p);
     foreach($data[3] as $arr){
         $opt = '';
         if($arr[2] == 'selected'){
-            $opt = 'Learner';
+            $opt = $learner;
         } elseif($arr[3] == 'selected'){
-            $opt = 'Employer';
+            $opt = $employer;
         }
         for($i = 4; $i < 6; $i++){
             $arr[$i] = ($arr[$i]) ? date('d-m-Y',strtotime($arr[$i])) : $arr[$i];
@@ -236,7 +240,7 @@ if($errorTxt != ''){
     $pdf->writeHTML($html, true, false, false, false, false, '');
 
     $html = '<table border="1" cellpadding="2"><thead><tr>
-        <th'.$headStyle.'><b>Additional Support Arrangements</b></th>
+        <th'.$headStyle.'><b>'.get_string('additional_sa', $p).'</b></th>
     </tr></thead><tbody><tr>
         <td>'.$data[0][22].'</td>
     </tr></tbody></table>
@@ -246,16 +250,16 @@ if($errorTxt != ''){
     $pdf->AddPage('L');
     //Table 6
     $html = '<table border="1" cellpadding="2"><thead><tr>
-        <th'.$headStyle.'><b>Modules</b></th>
-        <th'.$headStyle.'><b>Planned Start Date</b></th>
-        <th'.$headStyle.'><b>Revised Start Date</b></th>
-        <th'.$headStyle.'><b>Planned End Date</b></th>
-        <th'.$headStyle.'><b>Revised End Date</b></th>
-        <th'.$headStyle.'><b>Module Weighting %</b></th>
-        <th'.$headStyle.'><b>Planned OTJH</b></th>
-        <th'.$headStyle.'><b>Method of Delivery</b></th>
-        <th'.$headStyle.'><b>OTJ Tasks</b></th>
-        <th'.$headStyle.'><b>Actual OTJH Completed (as per log)</b></th>
+        <th'.$headStyle.'><b>'.get_string('modules', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('plan_sd', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('revise_sd', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('plan_ed', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('revise_ed', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('mod_weigh', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('plan_otjh', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('method_od', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('otj_tasks', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('act_otjh_comp', $p).'</b></th>
     </tr></thead><tbody>
     ';
     foreach($data[1][0] as $arr){
@@ -282,8 +286,8 @@ if($errorTxt != ''){
     $pdf->AddPage('P');
     //Table 7
     $html = '<table border="1" cellpadding="2"><thead><tr>
-        <th'.$headStyle.'><b>Date of Change</b></th>
-        <th'.$headStyle.'><b>Log</b></th>
+        <th'.$headStyle.'><b>'.get_string('date_oc', $p).'</b></th>
+        <th'.$headStyle.'><b>'.get_string('log', $p).'</b></th>
     </tr></thead><tbody>
     ';
     foreach($data[4] as $arr){

@@ -36,6 +36,7 @@
     $string['change_lt_short'] = 'Changes Log';
     $string['cid_notint'] = 'Course id provided is not a number.';
     $string['create_error'] = 'Creation error.';
+    $string['coach_se'] = 'Coach signature already exists';
 //D
     $string['dsw'] = 'DSW';
     $string['date_oc'] = 'Date of Change';
@@ -63,6 +64,8 @@
     $string['invalid_prt'] = 'Invalid Progress Review Total';
     $string['invalid_prnt'] = 'Invalid Progress Review New Total';
     $string['invalid_mt'] = 'Invalid Module Total';
+    $string['invalid_ep'] = 'Invalid e character provided';
+    $string['invalid_uid'] = 'Invalid user id provided';
 //J
 //K
     $string['kinaesthetic'] = 'Kinaesthetic';
@@ -76,6 +79,7 @@
     $string['learn_employ'] = 'Learner/Employer';
     $string['learner'] = 'Learner';
     $string['log'] = 'Log';
+    $string['learner_se'] = 'Learner signature already exists';
 //M
     $string['man_or_men'] = 'Manager/Mentor';
     $string['modules'] = 'Modules';
@@ -85,8 +89,14 @@
 //N
     $string['name'] = 'Name';
     $string['nocn'] = 'NOCN';
-    $string['no_la'] = 'No learners available.';
-    $string['no_cip'] = 'No course id provided.';
+    $string['no_ca'] = 'No courses available';
+    $string['no_la'] = 'No learners available';
+    $string['no_cip'] = 'No course id provided';
+    $string['no_uip'] = 'No user id provided';
+    $string['no_evp'] = 'No e value provided';
+    $string['not_eacicp'] = 'You are not enrolled as a coach in the course provided';
+    $string['not_ealicp'] = 'You are not enrolled as a learner in the course provided';
+    $string['no_pp'] = 'No parameters provided';
 //O
     $string['option'] = 'Option';
     $string['otjh'] = 'OTJH';
@@ -118,6 +128,11 @@
     $string['skill_scan_lr'] = 'Skill Scan Learner Result';
     $string['skill_scan_er'] = 'Skill Scan Employer Result';
     $string['short_tg'] = 'Short Term Goals';
+    $string['selected_nealic'] = 'The user selected is not enrolled as a learner in the course selected';
+    $string['setup_fuacne'] = 'Setup for the user and course provided does not exist';
+    $string['setup_fcpdne'] = 'Your setup for the course provided does not exist';
+    $string['setup_dneflacp'] = 'Setup does not exist for the learner and course provided';
+    $string['signature_c'] = 'Signature Creation';
 //T
     $string['trainingplans'] = 'Training Plans';
     $string['trainingplan'] = 'Training Plan';

@@ -9,6 +9,7 @@ require_once(__DIR__.'/../../config.php');
 use local_trainingplan\lib;
 require_login();
 $lib = new lib;
+$p = 'local_trainingplan';
 
 //Validate inputs and generate error text where required
 $errorTxt = '';
@@ -18,15 +19,15 @@ $cid = $_GET['cid'];
 $fullname = '';
 if($_GET['e']){
     if(($e != 'a' && $e != 'c') || empty($e)){
-        $errorTxt .= 'Invalid character for e provided.';
+        $errorTxt .= get_string('invalid_ep', $p);
     } else {
         if($_GET['uid']){
             if(!preg_match("/^[0-9]*$/", $uid) || empty($uid)){
-                $errorTxt .= 'Invalid user id provided.';
+                $errorTxt .= get_string('invalid_uid', $p);
             } else {
                 if($_GET['cid']){
                     if(!preg_match("/^[0-9]*$/", $cid) || empty($cid)){
-                        $errorTxt .= 'Invalid course id provided.';
+                        $errorTxt .= get_string('invalid_cip', $p);
                     } else {
                         //Successful input validation
                         //Now check capabilities and validate user provided is a learner
@@ -41,26 +42,26 @@ if($_GET['e']){
                             $PAGE->set_pagelayout('incourse');
                             $fullname = $lib->check_learner_enrolment($cid, $uid);
                             if($fullname == false){
-                                $errorTxt .= 'The user selected is not enrolled as a learner in the course selected.';
+                                $errorTxt .= get_string('selected_nealic', $p);
                             } else {
                                 $_SESSION['tp_setup_uid'] = $uid;
                                 $_SESSION['tp_setup_cid'] = $cid;
                                 $_SESSION['tp_setup_e'] = $e;
                             }
                         } else {
-                            $errorTxt .= 'You are not enrolled as a coach in the course provided.';
+                            $errorTxt .= get_string('not_eacicp', $p);
                         }
                     }
                 } else {
-                    $errorTxt .= 'No course id provided.';
+                    $errorTxt .= get_string('no_cip', $p);
                 }
             }
         } else {
-            $errorTxt .= 'No user id provided.';
+            $errorTxt .= get_string('no_uip', $p);
         }
     }
 } else {
-    $errorTxt .= 'No e value provided.';
+    $errorTxt .= get_string('no_evp', $p);
 }
 
 echo $OUTPUT->header();
@@ -76,7 +77,6 @@ if($errorTxt != ''){
         $e = '?id='.$cid;
     }
     //Create template data and output template
-    $p = 'local_trainingplan';
     $template = (Object)[
         'setup' => get_string('setup', $p),
         'btm' => get_string('btm', $p),
