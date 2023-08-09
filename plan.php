@@ -12,20 +12,24 @@ $lib = new lib;
 $p = 'local_trainingplan';
 
 //Validate inputs and generate error text where required
+$title = get_string('trainingplan', $p);
 $errorTxt = '';
-$e = $_GET['e'];
-$uid = $_GET['uid'];
-$cid = $_GET['cid'];
+$e = null;
+$uid = null;
+$cid = null;
 $fullname = '';
-if($_GET['e']){
+if(isset($_GET['e'])){
+    $e = $_GET['e'];
     if(($e != 'a' && $e != 'c') || empty($e)){
         $errorTxt .= get_string('invalid_ep', $p);
     } else {
-        if($_GET['uid']){
+        if(isset($_GET['uid'])){
+            $uid = $_GET['uid'];
             if(!preg_match("/^[0-9]*$/", $uid) || empty($uid)){
                 $errorTxt .= get_string('invalid_uid', $p);
             } else {
-                if($_GET['cid']){
+                if(isset($_GET['cid'])){
+                    $cid = $_GET['cid'];
                     if(!preg_match("/^[0-9]*$/", $cid) || empty($cid)){
                         $errorTxt .= get_string('invalid_cip', $p);
                     } else {
@@ -37,8 +41,8 @@ if($_GET['e']){
                             $PAGE->set_context($context);
                             $PAGE->set_course($lib->get_course_record($cid));
                             $PAGE->set_url(new moodle_url("/local/trainingplan/plan.php?cid=$cid&uid=$uid"));
-                            $PAGE->set_title('Training Plan');
-                            $PAGE->set_heading('Training Plan');
+                            $PAGE->set_title($title);
+                            $PAGE->set_heading($title);
                             $PAGE->set_pagelayout('incourse');
                             $fullname = $lib->check_learner_enrolment($cid, $uid);
                             if($fullname == false){
@@ -82,7 +86,7 @@ if($errorTxt != ''){
         echo("<h1 class='text-error'>".get_string('setup_dneflacp', $p)."</h1>");
     } else {
         $textTemplate = (Object)[
-            'trainingplan' => get_string('trainingplan', $p),
+            'trainingplan' => $title,
             'name' => get_string('name', $p),
             'employer_txt' => get_string('employer', $p),
             'start_date' => get_string('start_date', $p),
@@ -224,20 +228,6 @@ if($errorTxt != ''){
                 'modarray' => $data[1][0],
                 'total_mw' => $data[1][1][0],
                 'total_otjh' => $data[1][1][1],
-                'mathfs' => $data[2][0][1],
-                'mathlevel' => $data[2][0][2],
-                'mathmod' => $data[2][0][3],
-                'mathsd' => $data[2][0][4],
-                'mathped' => $data[2][0][5],
-                'mathaed' => $data[2][0][6],
-                'mathaead' => $data[2][0][7],
-                'engfs' => $data[2][1][1],
-                'englevel' => $data[2][1][2],
-                'engmod' => $data[2][1][3],
-                'engsd' => $data[2][1][4],
-                'engped' => $data[2][1][5],
-                'engaed' => $data[2][1][6],
-                'engaead' => $data[2][1][7],
                 'prarray' => $data[3],
                 'addsa' => $data[0][22],
                 'logarray' => array_values($data[4]),
@@ -247,8 +237,25 @@ if($errorTxt != ''){
             $template = (object)array_merge((array)$template, (array)$textTemplate);
             if(!empty($data[2])){
                 $template->fsarray = [['block']];
+                $tmpTemplate = (Object)[
+                    'mathfs' => $data[2][0][1],
+                    'mathlevel' => $data[2][0][2],
+                    'mathmod' => $data[2][0][3],
+                    'mathsd' => $data[2][0][4],
+                    'mathped' => $data[2][0][5],
+                    'mathaed' => $data[2][0][6],
+                    'mathaead' => $data[2][0][7],
+                    'engfs' => $data[2][1][1],
+                    'englevel' => $data[2][1][2],
+                    'engmod' => $data[2][1][3],
+                    'engsd' => $data[2][1][4],
+                    'engped' => $data[2][1][5],
+                    'engaed' => $data[2][1][6],
+                    'engaead' => $data[2][1][7]
+                ];
+                $template = (object)array_merge((array)$template, (array)$tmpTemplate);
             }
-            if($_SESSION['tp_update_success']){
+            if(isset($_SESSION['tp_update_success'])){
                 $template->successUpdate = [['Successful Update']];
                 unset($_SESSION['tp_update_success']);
             } else {

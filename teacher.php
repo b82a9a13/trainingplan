@@ -16,7 +16,7 @@ $type = '';
 $enrolments = [];
 $id = null;
 $errorText = '';
-if($_GET['id']){
+if(isset($_GET['id'])){
     //get id for the course and check for the capability after validating the input
     $id = $_GET['id'];
     if(!preg_match("/^[0-9]*$/", $id) || empty($id)){

@@ -13,14 +13,16 @@ $p = 'local_trainingplan';
 
 //Validate inputs and generate error text where required
 $errorTxt = '';
-$uid = $_GET['uid'];
-$cid = $_GET['cid'];
+$uid = null;
+$cid = null;
 $fullname = '';
-if($_GET['uid']){
+if(isset($_GET['uid'])){
+    $uid = $_GET['uid'];
     if(!preg_match("/^[0-9]*$/", $uid) || empty($uid)){
         $errorTxt .= get_string('invalid_uid', $p);
     } else {
-        if($_GET['cid']){
+        if(isset($_GET['cid'])){
+            $cid = $_GET['cid'];
             if(!preg_match("/^[0-9]*$/", $cid) || empty($cid)){
                 $errorTxt .= get_string('invalid_cip', $p);
             } else {

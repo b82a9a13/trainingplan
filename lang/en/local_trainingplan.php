@@ -66,6 +66,7 @@
     $string['invalid_mt'] = 'Invalid Module Total';
     $string['invalid_ep'] = 'Invalid e character provided';
     $string['invalid_uid'] = 'Invalid user id provided';
+    $string['initial_s'] = 'Initial Setup';
 //J
 //K
     $string['kinaesthetic'] = 'Kinaesthetic';

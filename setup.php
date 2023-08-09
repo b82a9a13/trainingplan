@@ -13,19 +13,22 @@ $p = 'local_trainingplan';
 
 //Validate inputs and generate error text where required
 $errorTxt = '';
-$e = $_GET['e'];
-$uid = $_GET['uid'];
-$cid = $_GET['cid'];
+$e = null;
+$uid = null;
+$cid = null;
 $fullname = '';
-if($_GET['e']){
+if(isset($_GET['e'])){
+    $e = $_GET['e'];
     if(($e != 'a' && $e != 'c') || empty($e)){
         $errorTxt .= get_string('invalid_ep', $p);
     } else {
-        if($_GET['uid']){
+        if(isset($_GET['uid'])){
+            $uid = $_GET['uid'];
             if(!preg_match("/^[0-9]*$/", $uid) || empty($uid)){
                 $errorTxt .= get_string('invalid_uid', $p);
             } else {
-                if($_GET['cid']){
+                if(isset($_GET['cid'])){
+                    $cid = $_GET['cid'];
                     if(!preg_match("/^[0-9]*$/", $cid) || empty($cid)){
                         $errorTxt .= get_string('invalid_cip', $p);
                     } else {
@@ -37,8 +40,9 @@ if($_GET['e']){
                             $PAGE->set_context($context);
                             $PAGE->set_course($lib->get_course_record($cid));
                             $PAGE->set_url(new moodle_url("/local/trainingplan/setup.php?cid=$cid&uid=$uid&e=$e"));
-                            $PAGE->set_title('Initial Setup');
-                            $PAGE->set_heading('Initial Setup');
+                            $title = get_string('initial_s', $p);
+                            $PAGE->set_title($title);
+                            $PAGE->set_heading($title);
                             $PAGE->set_pagelayout('incourse');
                             $fullname = $lib->check_learner_enrolment($cid, $uid);
                             if($fullname == false){
