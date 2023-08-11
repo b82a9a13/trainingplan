@@ -30,7 +30,7 @@ class lib{
     //Check if the current user is enrolled as a coach in a apprenticeship course
     public function check_coach(){
         global $DB;
-        $records = $DB->get_records_sql('SELECT {enrol}.courseid as courseid, {course}.fullname as fullname FROM {user_enrolments}
+        $records = $DB->get_records_sql('SELECT {user_enrolments}.id as id, {enrol}.courseid as courseid, {course}.fullname as fullname FROM {user_enrolments}
             INNER JOIN {enrol} ON {enrol}.id = {user_enrolments}.enrolid
             INNER JOIN {context} ON {context}.instanceid = {enrol}.courseid
             INNER JOIN {role_assignments} ON {role_assignments}.contextid = {context}.id
@@ -47,7 +47,7 @@ class lib{
     //Check if the current user is enrolled in the course provided as a coach
     public function check_coach_course($id){
         global $DB;
-        $record = $DB->get_record_sql('SELECT {enrol}.courseid as courseid FROM {user_enrolments}
+        $record = $DB->get_record_sql('SELECT {user_enrolments}.id as id, {enrol}.courseid as courseid FROM {user_enrolments}
             INNER JOIN {enrol} ON {enrol}.id = {user_enrolments}.enrolid
             INNER JOIN {context} ON {context}.instanceid = {enrol}.courseid
             INNER JOIN {role_assignments} ON {role_assignments}.contextid = {context}.id
@@ -71,7 +71,7 @@ class lib{
     public function get_enrolled_learners($id){
         global $DB;
         if($this->check_coach_course($id)){
-            $records = $DB->get_records_sql('SELECT {user}.firstname as firstname, {user}.lastname as lastname, {user}.id as id FROM {user_enrolments} 
+            $records = $DB->get_records_sql('SELECT {user_enrolments}.id as id, {user}.firstname as firstname, {user}.lastname as lastname, {user}.id as uid FROM {user_enrolments} 
                 INNER JOIN {enrol} ON {enrol}.id = {user_enrolments}.enrolid
                 INNER JOIN {context} ON {context}.instanceid = {enrol}.courseid
                 INNER JOIN {role_assignments} ON {role_assignments}.contextid = {context}.id
@@ -83,15 +83,15 @@ class lib{
                 $array = [];
                 foreach($records as $record){
                     //Need to add data for if a setup is created or not
-                    $tmpRecord = $DB->get_record_sql('SELECT coachsign FROM {trainingplan_setup} WHERE userid = ? and courseid = ?',[$record->id, $id]);
+                    $tmpRecord = $DB->get_record_sql('SELECT coachsign FROM {trainingplan_setup} WHERE userid = ? and courseid = ?',[$record->uid, $id]);
                     if($tmpRecord != null){
                         if($tmpRecord->coachsign != '' && $tmpRecord->coachsign != null){
-                            array_push($array, [$record->firstname.' '.$record->lastname, $id, $record->id, true, true]);
+                            array_push($array, [$record->firstname.' '.$record->lastname, $id, $record->uid, true, true]);
                         } else {
-                            array_push($array, [$record->firstname.' '.$record->lastname, $id, $record->id, true, false]);
+                            array_push($array, [$record->firstname.' '.$record->lastname, $id, $record->uid, true, false]);
                         }
                     } else {
-                        array_push($array, [$record->firstname.' '.$record->lastname, $id, $record->id, false, false]);
+                        array_push($array, [$record->firstname.' '.$record->lastname, $id, $record->uid, false, false]);
                     }
                 }
                 asort($array);
@@ -107,7 +107,7 @@ class lib{
     //Check if a userid is enrolled in a course as a learner
     public function check_learner_enrolment($cid, $uid){
         global $DB;
-        $record = $DB->get_record_sql('SELECT {user}.firstname as firstname, {user}.lastname as lastname FROM {user_enrolments} 
+        $record = $DB->get_record_sql('SELECT {user_enrolments}.id as id, {user}.firstname as firstname, {user}.lastname as lastname FROM {user_enrolments} 
             INNER JOIN {enrol} ON {enrol}.id = {user_enrolments}.enrolid
             INNER JOIN {context} ON {context}.instanceid = {enrol}.courseid
             INNER JOIN {role_assignments} ON {role_assignments}.contextid = {context}.id
@@ -533,6 +533,7 @@ class lib{
     //Create coach signature for a specific userid and course id
     public function create_sign($data){
         global $DB;
+        $record = new stdClass();
         if(isset($_SESSION['tp_sign_uid']) && isset($_SESSION['tp_sign_cid'])){
             //Update coach signature
             $record->id = $DB->get_record_sql('SELECT id FROM {trainingplan_setup} WHERE userid = ? and courseid = ?',[$_SESSION['tp_sign_uid'], $_SESSION['tp_sign_cid']])->id;

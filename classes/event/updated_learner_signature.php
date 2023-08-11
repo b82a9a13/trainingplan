@@ -13,7 +13,6 @@ class updated_learner_signature extends base {
     protected function init(){
         $this->data['crud'] = 'u';
         $this->data['edulevel'] = self::LEVEL_OTHER;
-        $this->data['objecttable'] = 'trainingplan_setup';
     }
     public static function get_name(){
         return "Learner signature updated";

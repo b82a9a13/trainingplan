@@ -13,7 +13,6 @@ class created_setup extends base {
     protected function init(){
         $this->data['crud'] = 'c';
         $this->data['edulevel'] = self::LEVEL_TEACHING;
-        $this->data['objecttable'] = 'trainingplan_setup';
     }
     public static function get_name(){
         return "Learner setup created";

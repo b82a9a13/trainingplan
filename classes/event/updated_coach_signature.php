@@ -13,7 +13,6 @@ class updated_coach_signature extends base {
     protected function init(){
         $this->data['crud'] = 'u';
         $this->data['edulevel'] = self::LEVEL_TEACHING;
-        $this->data['objecttable'] = 'trainingplan_setup';
     }
     public static function get_name(){
         return "Coach signature updated";
