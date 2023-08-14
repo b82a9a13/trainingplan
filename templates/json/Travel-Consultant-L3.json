@@ -1,0 +1,185 @@
+{
+    "name": "Travel Consultant L3",
+    "modules": [
+        {
+            "name": "Geography",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "4",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Travel Information",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "7",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Industry Practice",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "4",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Travel Options",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "8",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Product & Service",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "7",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Customer",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "12",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Legal & Compliance",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "8",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Industry Technology",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "7",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Business",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "7",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Sales",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "9",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Team & Personal Performance",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "12",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Communication",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "13",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        },
+        {
+            "name": "Sustainability",
+            "psd": "",
+            "rsd": "",
+            "ped": "",
+            "red": "",
+            "mw": "2",
+            "potjh": "",
+            "mod": "Elearning, F2F, Remote",
+            "otjt": "",
+            "aotjhc": ""
+        }
+    ],
+    "fsd": [
+        {
+            "fs": "Maths",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        },
+        {
+            "fs": "English",
+            "level": "",
+            "mod": "BKSB & F2F & Remote",
+            "sd": "",
+            "ped": "",
+            "aed": "",
+            "usd": "",
+            "uped": "",
+            "ad": ""
+        }
+    ]
+    }
