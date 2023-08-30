@@ -69,7 +69,7 @@ $fsValues = [];
 if(isset($_POST[$fsArray[0][0]]) && isset($_POST[$fsArray[1][0]])){
     $strings = [get_string('func_s', $p), get_string('row', $p), get_string('act_ed', $p), get_string('act_ead', $p)];
     foreach($fsArray as $fsArr){
-        $tmp = [$_POST[$fsArr[0]], $_POST[$fsArr[1]], $_POST[$fsArr[2]], $_POST[$fsArr[3]]];
+        $tmp = [$_POST[$fsArr[0]], $_POST[$fsArr[1]]];
         if($tmp[0] != null && !empty($tmp[0])){
             if(!preg_match($date, $tmp[0])){
                 array_push($errorarray, [$fsArr[0], "$strings[0], $strings[2], $strings[1] ".$int]);

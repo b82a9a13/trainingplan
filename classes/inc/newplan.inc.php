@@ -22,8 +22,8 @@ if(!preg_match("/^[a-z A-Z'\-]*$/",$name) || empty($name)){
     array_push($errorarray, ['name', get_string('name', $p).':'.preg_replace("/[a-z A-Z'\-]/",'',$name)]);
 }
 $employer = str_replace("($)","&",$_POST['employer']);
-if(!preg_match("/^[a-z A-Z'\-&]*$/", $employer) || empty($employer)){
-    array_push($errorarray, ['employer', get_string('employer', $p).':'.preg_replace("/[a-z A-Z'\-&]/",'',$employer)]);
+if(!preg_match("/^[a-z A-Z0-9'\-&()]*$/", $employer) || empty($employer)){
+    array_push($errorarray, ['employer', get_string('employer', $p).':'.preg_replace("/[a-z A-Z0-9'\-&()]/",'',$employer)]);
 }
 $startdate = $_POST['startdate'];
 if($startdate != null && !empty($startdate)){
