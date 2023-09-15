@@ -10,7 +10,7 @@ use stdClass;
 class lib{
 
     //Get the category id for apprenticeships
-    public function get_category_id(){
+    private function get_category_id(){
         global $DB;
         return $DB->get_record_sql('SELECT id FROM {course_categories} WHERE name = ?',['Apprenticeships'])->id;
     }
@@ -250,13 +250,13 @@ class lib{
     }
 
     //Get plan id for a specific userid and courseid
-    public function get_planid($uid, $cid){
+    private function get_planid($uid, $cid){
         global $DB;
         return $DB->get_record_sql('SELECT id FROM {trainingplan_plans} WHERE userid = ? AND courseid = ?',[$uid, $cid])->id;
     }
 
     //Get the current users full name
-    public function get_fullname(){
+    private function get_fullname(){
         global $USER;
         return $USER->firstname .' '. $USER->lastname;
     }
